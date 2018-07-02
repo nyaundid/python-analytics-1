@@ -1,0 +1,105 @@
+# coding: utf-8
+
+# In[36]:
+
+
+import numpy as np
+
+
+# In[703]:
+
+
+Iris = np.genfromtxt("Documents\\FisherIris_ML.csv", delimiter=",")
+Iris
+        
+
+
+# In[704]:
+
+
+Iris.shape 
+
+
+# In[705]:
+
+
+Iris[:, 4:5] 
+
+
+# In[706]:
+
+
+np.where(Iris <0);
+
+
+# In[707]:
+
+
+print(np.where(Iris <0));
+
+
+# In[712]:
+
+
+Iris = np.delete(Iris,[ 10,  23,  58,  89, 108, 136],axis=0)
+
+
+# In[778]:
+
+
+print(Iris)
+
+
+# In[729]:
+
+
+Iris.shape
+
+
+# In[850]:
+
+
+X = Iris [(0,1,2,3), :5]
+
+
+# In[851]:
+
+
+print(X)
+
+
+# In[852]:
+
+
+Y = Iris [(4), :5]
+
+
+# In[853]:
+
+
+print(Y)
+
+
+# In[890]:
+
+
+X.min(axis=1) 
+
+
+# In[891]:
+
+
+X.max(axis=1) 
+
+
+# In[912]:
+
+
+X[3:,:5] > 36
+
+
+# In[926]:
+
+
+np.sum(X[3:,:5] > 36)
+
